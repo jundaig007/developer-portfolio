@@ -1,4 +1,5 @@
-import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Code2, Server, Database, Workflow } from 'lucide-react'
+import { useState } from 'react'
+import { ArrowUpRight, Github, Mail, MapPin, Code2, Server, Database, Workflow, Menu, X, ExternalLink, CheckCircle2 } from 'lucide-react'
 
 const skills = [
   'React.js', 'JavaScript', 'TypeScript', 'Next.js', 'Vite', 'Tailwind CSS',
@@ -10,107 +11,146 @@ const projects = [
   {
     title: 'DigitalPH Business Platform',
     type: 'React / Business Website',
-    description: 'A production business website and project platform built around modern React workflows, responsive UI, project management features, and cloud deployment.',
+    summary: 'A production website and project platform created to present DigitalPH services, case work, and business capabilities through a responsive React experience.',
+    challenge: 'Create a credible digital presence that could support client acquisition while remaining easy to extend with new projects and services.',
+    outcome: 'Delivered a production-deployed React application with project management features, responsive layouts, service pages, and cloud deployment.',
     stack: ['React', 'Vite', 'Tailwind CSS', 'Cloudflare'],
     live: 'https://thedigitalph.com',
+    source: 'https://github.com/jundaig007/DGHub-Business-Website',
   },
   {
     title: 'Meat Shop POS & Inventory',
     type: 'Full-Stack Business Application',
-    description: 'End-to-end POS and inventory platform covering products, purchasing, stock movements, customers, delivery, reporting, search, pricing, and operational workflows.',
+    summary: 'An operational system for day-to-day meat shop workflows, covering point of sale, purchasing, inventory, customers, delivery, reporting, and product pricing.',
+    challenge: 'Bring fragmented store operations into one application while keeping transaction flows fast and practical for everyday use.',
+    outcome: 'Built and deployed a full-stack system with product search, CRUD workflows, stock tracking, purchasing, POS operations, customer records, reporting, and API integration.',
     stack: ['React', 'FastAPI', 'Python', 'REST API'],
     live: 'https://meat.thedigitalph.com',
+    source: 'https://github.com/jundaig007/meat',
   },
   {
     title: 'DGHub Revenue OS',
     type: 'Enterprise Workflow Automation',
-    description: 'A modular revenue operations platform designed to centralize leads, opportunities, proposals, outreach, contracts, invoicing, onboarding, and workflow automation.',
+    summary: 'A modular revenue operations platform designed to centralize the customer lifecycle from lead intake through proposals, contracts, invoicing, and onboarding.',
+    challenge: 'Reduce the operational friction created by disconnected sales and client-management processes.',
+    outcome: 'Designed a modular platform architecture with tenant-aware workflows, lead management, opportunity handling, proposals, outreach, contracts, invoicing, documents, and onboarding.',
     stack: ['Next.js', 'FastAPI', 'SQLAlchemy', 'PostgreSQL'],
+    source: 'https://github.com/jundaig007/dghub-v2',
   },
   {
     title: 'Clinic CRM & Appointment System',
     type: 'Healthcare Business Application',
-    description: 'A CRM and operations platform for inquiries, lead pipelines, appointments, calendar management, patient profiles, and medical-record workflows.',
+    summary: 'A clinic operations platform connecting inquiry management, CRM workflows, appointments, calendars, patient profiles, and medical records.',
+    challenge: 'Give clinic staff one structured workflow for moving a prospect from inquiry to appointment and ongoing patient management.',
+    outcome: 'Implemented CRM pipeline concepts, appointment conflict handling, calendar workflows, inquiry linkage, patient profiles, and medical-record functionality.',
     stack: ['React', 'REST API', 'Database', 'Responsive UI'],
   },
 ]
 
 const experience = [
-  ['Systems Analyst', 'UHG - Optum', 'Enterprise systems analysis, requirements, process improvement, and cross-functional collaboration.'],
-  ['Product Analyst', 'Info Alchemy Corp.', 'Product analysis, requirements definition, stakeholder coordination, and technology-driven business solutions.'],
-  ['COO', 'Espasio Construction', 'Operations leadership, process management, business strategy, and practical problem solving.'],
-  ['Software Developer', 'Independent Projects', 'Designing and delivering web applications, business systems, APIs, automation, and production deployments.'],
+  ['Systems Analyst', 'UHG - Optum', 'Worked with enterprise systems, requirements, process improvement, and cross-functional teams—experience that shaped how I translate business needs into technical solutions.'],
+  ['Product Analyst', 'Info Alchemy Corp.', 'Handled product analysis, requirements definition, stakeholder coordination, and technology-driven solution planning.'],
+  ['COO', 'Espasio Construction', 'Led operations and business processes, building the practical management perspective I now bring into software development.'],
+  ['Software Developer', 'Independent & Business Projects', 'Designing and delivering responsive web applications, operational systems, REST APIs, automation workflows, and production deployments.'],
+]
+
+const strengths = [
+  ['Product thinking', 'I connect interface decisions to the underlying user and business problem.'],
+  ['End-to-end ownership', 'I can move from requirements and UI implementation through API integration, testing, Git workflows, and deployment.'],
+  ['Business systems', 'My strongest work is software that improves real operational workflows—not just isolated demo interfaces.'],
 ]
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const closeMenu = () => setMenuOpen(false)
+
   return <div className="app">
     <header className="nav shell">
-      <a className="brand" href="#top"><span>JD</span> Jun Daig</a>
-      <nav>
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+      <a className="brand" href="#top" onClick={closeMenu}><span>JD</span> Jun Daig</a>
+      <nav className={menuOpen ? 'open' : ''}>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#skills" onClick={closeMenu}>Skills</a>
+        <a href="#projects" onClick={closeMenu}>Projects</a>
+        <a href="#experience" onClick={closeMenu}>Experience</a>
+        <a className="mobileCta" href="mailto:daigjun444@gmail.com">Contact</a>
       </nav>
       <a className="navCta" href="mailto:daigjun444@gmail.com">Let's talk</a>
+      <button className="menuButton" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
     </header>
 
     <main id="top">
       <section className="hero shell">
-        <div className="availability"><i /> Available for Front-End & Full-Stack opportunities</div>
-        <p className="eyebrow">FRONT-END / FULL-STACK DEVELOPER</p>
+        <div className="availability"><i /> Open to Front-End & Full-Stack opportunities</div>
+        <p className="eyebrow">REACT · FRONT-END · FULL-STACK</p>
         <h1>I build digital products that turn <em>complex workflows</em> into simple experiences.</h1>
-        <p className="lead">React-focused developer with experience building responsive business applications, APIs, dashboards, operational systems, and automation from requirements through production deployment.</p>
+        <p className="lead">React-focused developer with a background in systems analysis, product analysis, and operations. I build responsive business applications, connect them to reliable APIs, and take products from requirements through production deployment.</p>
         <div className="actions">
-          <a className="primary" href="#projects">View my work <ArrowUpRight size={18}/></a>
-          <a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> GitHub</a>
+          <a className="primary" href="#projects">Explore selected work <ArrowUpRight size={18}/></a>
+          <a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> GitHub profile</a>
         </div>
         <div className="quickFacts">
           <span><MapPin size={16}/> Philippines · Remote-ready</span>
           <span><Code2 size={16}/> React & modern JavaScript</span>
-          <span><Server size={16}/> Full-stack capable</span>
+          <span><Server size={16}/> Frontend + API integration</span>
         </div>
       </section>
 
       <section id="about" className="section shell twoCol">
         <div><p className="eyebrow">ABOUT ME</p><h2>Engineering with a business mindset.</h2></div>
         <div className="aboutCopy">
-          <p>I combine hands-on software development with experience in systems analysis, product analysis, and business operations. That background helps me understand not only how to build a feature, but why it matters to the people and organization using it.</p>
-          <p>I enjoy translating requirements into clean, responsive interfaces and reliable systems. I work comfortably across frontend development, API integration, data-driven applications, testing, Git workflows, and deployment.</p>
+          <p>I combine hands-on development with experience in systems analysis, product analysis, and business operations. That means I approach frontend work by asking two questions: what does the user need, and what outcome does the business need?</p>
+          <p>I’m comfortable working across responsive UI development, reusable components, API integration, data-driven applications, testing, Git/GitHub workflows, and cloud deployment.</p>
         </div>
+      </section>
+
+      <section className="valueStrip shell">
+        {strengths.map(([title, text]) => <div className="valueItem" key={title}><CheckCircle2 size={18}/><div><h3>{title}</h3><p>{text}</p></div></div>)}
       </section>
 
       <section id="skills" className="section alt">
         <div className="shell">
-          <p className="eyebrow">TECHNICAL TOOLKIT</p><h2>Technologies I work with.</h2>
+          <p className="eyebrow">TECHNICAL TOOLKIT</p><h2>Technologies I use to ship products.</h2>
           <div className="skillGrid">
-            <div className="capability"><Code2/><h3>Frontend</h3><p>Responsive, accessible interfaces and reusable component-driven applications.</p></div>
-            <div className="capability"><Server/><h3>Backend & APIs</h3><p>REST API integration and Python/FastAPI services for business applications.</p></div>
-            <div className="capability"><Database/><h3>Data</h3><p>Relational data modeling, SQLAlchemy, PostgreSQL, and application data flows.</p></div>
-            <div className="capability"><Workflow/><h3>Automation</h3><p>Turning repetitive business processes into structured digital workflows.</p></div>
+            <div className="capability"><Code2/><h3>Frontend</h3><p>Responsive interfaces, reusable components, forms, dashboards, search, filtering, and application state.</p></div>
+            <div className="capability"><Server/><h3>Backend & APIs</h3><p>REST API integration plus Python/FastAPI services for production business applications.</p></div>
+            <div className="capability"><Database/><h3>Data</h3><p>Relational data modeling, SQLAlchemy, PostgreSQL, SQLite, and application data flows.</p></div>
+            <div className="capability"><Workflow/><h3>Automation</h3><p>Designing software around repeatable business processes, validations, roles, and operational workflows.</p></div>
           </div>
           <div className="chips">{skills.map(s => <span key={s}>{s}</span>)}</div>
         </div>
       </section>
 
       <section id="projects" className="section shell">
-        <p className="eyebrow">SELECTED WORK</p><div className="sectionHead"><h2>Projects built around real business needs.</h2><p>From customer-facing websites to operational platforms.</p></div>
+        <p className="eyebrow">SELECTED WORK</p>
+        <div className="sectionHead"><h2>Projects built around real business needs.</h2><p>Production websites, operational systems, and workflow platforms.</p></div>
         <div className="projectGrid">{projects.map((p,i) => <article className="project" key={p.title}>
-          <div className="projectNo">0{i+1}</div><p className="projectType">{p.type}</p><h3>{p.title}</h3><p>{p.description}</p>
+          <div className="projectTop"><div className="projectNo">0{i+1}</div><p className="projectType">{p.type}</p></div>
+          <h3>{p.title}</h3><p className="projectSummary">{p.summary}</p>
+          <div className="caseStudy"><div><span>Challenge</span><p>{p.challenge}</p></div><div><span>Delivered</span><p>{p.outcome}</p></div></div>
           <div className="projectStack">{p.stack.map(x => <span key={x}>{x}</span>)}</div>
-          {p.live && <a href={p.live} target="_blank" rel="noreferrer">View live project <ArrowUpRight size={16}/></a>}
+          <div className="projectLinks">
+            {p.live && <a href={p.live} target="_blank" rel="noreferrer"><ExternalLink size={16}/> Live project</a>}
+            {p.source && <a href={p.source} target="_blank" rel="noreferrer"><Github size={16}/> Source</a>}
+          </div>
         </article>)}</div>
       </section>
 
       <section id="experience" className="section alt"><div className="shell">
-        <p className="eyebrow">EXPERIENCE</p><h2>A multidisciplinary perspective.</h2>
+        <p className="eyebrow">EXPERIENCE</p><h2>Technical execution backed by product and operations experience.</h2>
         <div className="timeline">{experience.map(([role,company,text]) => <div className="experience" key={role+company}><div><h3>{role}</h3><strong>{company}</strong></div><p>{text}</p></div>)}</div>
       </div></section>
 
       <section className="contact shell">
-        <p className="eyebrow">LET'S BUILD SOMETHING USEFUL</p><h2>Looking for a developer who understands both code and business?</h2>
-        <p>I’m open to frontend, React, full-stack, and product-focused development opportunities.</p>
-        <div className="actions center"><a className="primary" href="mailto:daigjun444@gmail.com"><Mail size={18}/> Contact me</a><a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> GitHub</a><a className="secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={18}/> LinkedIn</a></div>
+        <p className="eyebrow">LET'S BUILD SOMETHING USEFUL</p><h2>Need a developer who can understand the product, not just the ticket?</h2>
+        <p>I’m open to Front-End, React, Full-Stack, and product-focused software development opportunities.</p>
+        <div className="actions center">
+          <a className="primary" href="mailto:daigjun444@gmail.com"><Mail size={18}/> Email me</a>
+          <a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> View GitHub</a>
+        </div>
+        <span className="emailText">daigjun444@gmail.com</span>
       </section>
     </main>
-    <footer className="shell"><span>© 2026 Jun Daig</span><span>Built with React & Vite</span></footer>
+    <footer className="shell"><span>© 2026 Jun Daig</span><span>Built with React & Vite · Deployed with GitHub Pages</span></footer>
   </div>
 }
 
