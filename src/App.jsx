@@ -80,13 +80,18 @@ function App() {
 
     <main id="top">
       <section className="hero shell">
-        <div className="availability"><i /> Open to Front-End & Full-Stack opportunities</div>
-        <p className="eyebrow">REACT · FRONT-END · FULL-STACK</p>
-        <h1>I build digital products that turn <em>complex workflows</em> into simple experiences.</h1>
-        <p className="lead">React-focused developer with a background in systems analysis, product analysis, and operations. I build responsive business applications, connect them to reliable APIs, and take products from requirements through production deployment.</p>
-        <div className="actions">
-          <a className="primary" href="#projects">Explore selected work <ArrowUpRight size={18}/></a>
-          <a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> GitHub profile</a>
+        <div className="heroIntro">
+          <div className="heroCopy">
+            <div className="availability"><i /> Open to Front-End & Full-Stack opportunities</div>
+            <p className="eyebrow">REACT · FRONT-END · FULL-STACK</p>
+            <h1>I build digital products that turn <em>complex workflows</em> into simple experiences.</h1>
+            <p className="lead">React-focused developer with a background in systems analysis, product analysis, and operations. I build responsive business applications, connect them to reliable APIs, and take products from requirements through production deployment.</p>
+            <div className="actions">
+              <a className="primary" href="#projects">Explore selected work <ArrowUpRight size={18}/></a>
+              <a className="secondary" href="https://github.com/jundaig007" target="_blank" rel="noreferrer"><Github size={18}/> GitHub profile</a>
+            </div>
+          </div>
+          <div className="portraitCard"><img src="/portfolio-portrait.svg" alt="Jun Daig, React and full-stack developer"/><div className="portraitCaption"><strong>Jun Daig</strong><span>React · Full-Stack · Product-minded</span></div></div>
         </div>
         <div className="quickFacts">
           <span><MapPin size={16}/> Philippines · Remote-ready</span>
