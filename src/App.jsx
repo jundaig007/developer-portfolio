@@ -10,6 +10,8 @@ const projects = [
 {title:'DigitalPH Business Platform',type:'React / Business Website',image:'https://image.thum.io/get/width/1200/crop/700/noanimate/https://thedigitalph.com',imageAlt:'DigitalPH business website',summary:'A production website and project platform created to present DigitalPH services, case work, and business capabilities through a responsive React experience.',challenge:'Create a credible digital presence that could support client acquisition while remaining easy to extend with new projects and services.',outcome:'Delivered a production-deployed React application with project management features, responsive layouts, service pages, and cloud deployment.',stack:['React','Vite','Tailwind CSS','Cloudflare'],live:'https://thedigitalph.com',liveLabel:'Live website',source:'https://github.com/jundaig007/DGHub-Business-Website'},
   {
     title: 'Shepherd’s Deli',
+    image: `${import.meta.env.BASE_URL}shepherds-deli-homepage.webp`,
+    imageAlt: 'Shepherd’s Deli storefront homepage',
     type: 'Food Retail / Storefront & Operations',
     summary: 'A storefront for browsing deli products, paired with an operations dashboard for staff.',
     challenge: 'Give customers a place to browse the catalog and staff a way to manage orders and stock across branches.',
@@ -20,6 +22,8 @@ const projects = [
   },
   {
     title: 'Lualhati Farm & Leisure',
+    image: `${import.meta.env.BASE_URL}lualhati-homepage.webp`,
+    imageAlt: 'Lualhati Farm & Leisure homepage overlooking the resort pool',
     type: 'Hospitality / Resort Booking',
     summary: 'A website for a private farm resort with day-tour and overnight booking options.',
     challenge: 'Help guests choose a package and request a date while giving staff a calendar to manage reservations.',
@@ -30,6 +34,8 @@ const projects = [
   },
   {
     title: 'Jay’s Cakes',
+    image: `${import.meta.env.BASE_URL}jays-cakes-homepage.webp`,
+    imageAlt: 'Jay’s Cakes homepage featuring a custom celebration cake',
     type: 'Bakery / Custom Cake Inquiries',
     summary: 'A custom cake website with a design gallery, 3D previews, and an inquiry form.',
     challenge: 'Help customers find a design and share enough information for the bakery to prepare a quote.',
