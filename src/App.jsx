@@ -7,7 +7,37 @@ const projects = [
 {title:'Aurelia Aesthetic Clinic Platform',type:'Healthcare / Full-Stack Business Application',image:'https://image.thum.io/get/width/1200/crop/700/noanimate/https://aesthetic-demo.thedigitalph.com/',imageAlt:'Aurelia aesthetic clinic customer website',summary:'A customer-facing aesthetic clinic experience paired with an administrative platform for managing clinic workflows and digital operations.',challenge:'Create a polished clinic experience for customers while giving staff a practical operational interface behind the scenes.',outcome:'Delivered a responsive clinic website and dedicated admin experience demonstrating service presentation, customer workflows, clinic operations, and business-oriented UX.',stack:['React','Responsive UI','Business Workflows','Admin System'],live:'https://aesthetic-demo.thedigitalph.com/',liveLabel:'Customer website',admin:'https://aesthetic-demo.thedigitalph.com/admin',adminLabel:'Clinic admin'},
 {title:'DigitalPH Command Center',type:'Revenue Operations / Executive Platform',image:`${import.meta.env.BASE_URL}command-center-dashboard.png`,imageAlt:'DigitalPH Command Center dashboard',summary:'A business operations and revenue command center designed to centralize visibility across lead discovery, qualification, proposals, outreach, contracts, invoicing, onboarding, and client delivery.',challenge:'Reduce fragmentation across the client acquisition and delivery lifecycle while giving management a single operational view.',outcome:'Designed an executive-facing command center around revenue operations, workflow visibility, customer lifecycle management, and decision support.',stack:['React','FastAPI','SQLAlchemy','PostgreSQL'],live:'https://thedigitalph.com/command-center',liveLabel:'Open command center',source:'https://github.com/jundaig007/dghub-v2'},
 {title:'Meat Shop POS & Inventory',type:'Full-Stack Business Application',image:'https://image.thum.io/get/width/1200/crop/700/noanimate/https://meat.thedigitalph.com',imageAlt:'Meat Shop POS and Inventory platform',summary:'An operational system for day-to-day meat shop workflows, covering point of sale, purchasing, inventory, customers, delivery, reporting, and product pricing.',challenge:'Bring fragmented store operations into one application while keeping transaction flows fast and practical for everyday use.',outcome:'Built and deployed a full-stack system with product search, CRUD workflows, stock tracking, purchasing, POS operations, customer records, reporting, and API integration.',stack:['React','FastAPI','Python','REST API'],live:'https://meat.thedigitalph.com',liveLabel:'Live system',source:'https://github.com/jundaig007/meat'},
-{title:'DigitalPH Business Platform',type:'React / Business Website',image:'https://image.thum.io/get/width/1200/crop/700/noanimate/https://thedigitalph.com',imageAlt:'DigitalPH business website',summary:'A production website and project platform created to present DigitalPH services, case work, and business capabilities through a responsive React experience.',challenge:'Create a credible digital presence that could support client acquisition while remaining easy to extend with new projects and services.',outcome:'Delivered a production-deployed React application with project management features, responsive layouts, service pages, and cloud deployment.',stack:['React','Vite','Tailwind CSS','Cloudflare'],live:'https://thedigitalph.com',liveLabel:'Live website',source:'https://github.com/jundaig007/DGHub-Business-Website'}
+{title:'DigitalPH Business Platform',type:'React / Business Website',image:'https://image.thum.io/get/width/1200/crop/700/noanimate/https://thedigitalph.com',imageAlt:'DigitalPH business website',summary:'A production website and project platform created to present DigitalPH services, case work, and business capabilities through a responsive React experience.',challenge:'Create a credible digital presence that could support client acquisition while remaining easy to extend with new projects and services.',outcome:'Delivered a production-deployed React application with project management features, responsive layouts, service pages, and cloud deployment.',stack:['React','Vite','Tailwind CSS','Cloudflare'],live:'https://thedigitalph.com',liveLabel:'Live website',source:'https://github.com/jundaig007/DGHub-Business-Website'},
+  {
+    title: 'Shepherd’s Deli',
+    type: 'Food Retail / Storefront & Operations',
+    summary: 'A storefront for browsing deli products, paired with an operations dashboard for staff.',
+    challenge: 'Give customers a place to browse the catalog and staff a way to manage orders and stock across branches.',
+    outcome: 'Built the storefront and staff workflows for inventory, orders, deliveries, and branch stock transfers.',
+    stack: ['TypeScript', 'Cloudflare Workers', 'Cloudflare D1'],
+    live: 'https://sheperds-deli-staging.daigjun444.workers.dev/',
+    liveLabel: 'Open storefront demo',
+  },
+  {
+    title: 'Lualhati Farm & Leisure',
+    type: 'Hospitality / Resort Booking',
+    summary: 'A website for a private farm resort with day-tour and overnight booking options.',
+    challenge: 'Help guests choose a package and request a date while giving staff a calendar to manage reservations.',
+    outcome: 'Built the resort website, booking request flow, and admin calendar for tentative bookings, confirmed stays, and maintenance blocks.',
+    stack: ['Cloudflare Workers', 'Cloudflare D1'],
+    live: 'https://luwalhati.daigjun444.workers.dev/',
+    liveLabel: 'Visit resort website',
+  },
+  {
+    title: 'Jay’s Cakes',
+    type: 'Bakery / Custom Cake Inquiries',
+    summary: 'A custom cake website with a design gallery, 3D previews, and an inquiry form.',
+    challenge: 'Help customers find a design and share enough information for the bakery to prepare a quote.',
+    outcome: 'Built a cake gallery and an inquiry flow for choosing a design or uploading a reference photo.',
+    stack: ['Cloudflare Workers', 'Cloudflare D1', 'Cloudflare R2'],
+    live: 'https://jays-cakes.outreachdghub.workers.dev/',
+    liveLabel: 'Visit cake website',
+  },
 ]
 const experience=[
 ['Systems Analyst | Business Intelligence & Reporting','UnitedHealth Group (Optum)','Supported director-level and enterprise reporting across multiple business units. Consolidated operational, resource, project-delivery, and support reporting into executive dashboards; partnered with Revenue Operations on billable/non-billable analysis; and collaborated with Data Governance to cleanse, standardize, classify, and consolidate fragmented data into reliable reporting structures. Built and optimized Power BI, TIBCO Spotfire, and SQL solutions supporting 500+ users, worked with datasets exceeding 21 million records, and improved reporting performance by up to 90%.',['Power BI','TIBCO Spotfire','SQL','Data Governance','21M+ Records','500+ Users']],
